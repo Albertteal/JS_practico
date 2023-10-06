@@ -1,26 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mokepon</title>
-</head>
-<body>
-    <h1>Avatar 🔥💧🌪🍃</h1>
-    
-    <section id ="Clase"></section>
-        <h2>Elige tu clase</h2>
-    <section id ="Ataque">
-        <h2>Selecciona el ataque</h2>
-        <p>Tu mascota tiene <span>3</span> vidas</p> 
-        <p>La mascota del enemigo tiene <span>3</span> vidas</p> 
-        <P>
-            <button>Fuego 🔥</button>
-            <button>Agua 💧</button>
-            <button>Aire 🌪</button>
-            <button>Planta 🍃 </button>
-        </P>
-    </section>
-   
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Elementos</title>
+        <script src="./JS/js.js"></script>
+    </head>
+    <body>
+        <h1>Elementos 🔥💧🌪🍃</h1>
+        
+        <section id ="Clase">
+            <h2>Elige tu clase</h2>
+
+            <input type="radio"name="clase"  id="Herbolestero"/>
+            <label for="Herbolestero">Herbolestero</label> <br>
+             
+            <input type="radio" name="clase" id="Maetro del viento"/> 
+            <label for="Maetro del viento">Maetro del viento</label> <br>
+           
+            <input type="radio" name="clase" id="Cataclismo"/>
+            <label for="Cataclismo">Cataclismo</label> <br>
+            
+            <input type="radio" name="clase" id="Nagas"/>
+            <label for="Nagas">Nagas</label> <br>
+            
+            <input type="radio" name="clase" id="Tauren"/>
+            <label for="Tauren">Tauren</label> <br>
+            
+            <input type="radio" name="clase" id="Acuáticos"/> 
+            <label for="Acuáticos">Acuáticos</label> <br>
+
+            <input type="radio" name="clase" id="Sagrado"/> 
+            <label for="Sagrado">Sagrado</label> <br>
+            
+
+
+
+
+            <button>Seleccionar</button>
+        </section>
+        <section id ="Ataque">
+            <h2>Selecciona el ataque</h2>
+
+            <p>Tu clase tiene <span>3</span> vidas</p> 
+            <p>La clase del enemigo es <span>3</span> vidas</p> 
+            <P>
+                <button>Fuego 🔥</button>
+                <button>Agua 💧</button>
+                <button>Aire 🌪</button>
+                <button>Planta 🍃 </button>
+                <button>Sagrado ✝ </button>
+
+            </P>
+        </section>
+        <section id ="mensajes">
+            <p>Atacaste con FUEGO, el enemigo atacó con PLANTA - GANASTE  </p>
+        </section>
+
+        <section id="reiniciar">
+            <button>Reiniciar</button>
+        </section>
+    </body>
 </html>
