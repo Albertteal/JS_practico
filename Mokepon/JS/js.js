@@ -14,9 +14,6 @@ function SeleccionarClaseJugador(){
 
     let spanclaseJugador = document.getElementById('claseJugador')
 
-
-
-
     if (inputHerbolestero.checked){   
         spanclaseJugador.innerHTML = "Herbolestero"   //Hacemos que el nombre cambie conforme a la mascota para la parte de vidas
         alert("Seleccionate Herbolestero")
@@ -41,6 +38,16 @@ function SeleccionarClaseJugador(){
     } else{
         alert("Selecciona una clase")
     }
+
+    SeleccionarClaseEnemigo()
+}
+
+function SeleccionarClaseEnemigo(){
+    let claseAleatorio = aleatorio(1,7)
+}
+
+function aleatorio(min,max){
+    return Math.floor(Math.random() * (max - min + 1) + min)
 }
 window.addEventListener('load', iniciarJuego) //Nos sirve oara avisar que inicie todo cuando ya se haya cargado
                                                 //Todo el HTML y ahora sí pasamos al JS
