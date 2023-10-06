@@ -12,22 +12,31 @@ function SeleccionarClaseJugador(){
     let inputHydros = document.getElementById('Hydros')
     let inputPaladin = document.getElementById('Paladin')
 
+    let spanclaseJugador = document.getElementById('claseJugador')
 
 
 
-    if (inputHerbolestero.checked){      
+
+    if (inputHerbolestero.checked){   
+        spanclaseJugador.innerHTML = "Herbolestero"   //Hacemos que el nombre cambie conforme a la mascota para la parte de vidas
         alert("Seleccionate Herbolestero")
     } else if (inputMonje.checked){
+        spanclaseJugador.innerHTML = "Monje"
         alert("Seleccionate Monje")
     } else if (inputCataclismo.checked){
+        spanclaseJugador.innerHTML = "Cataclismo"
         alert("Seleccionate Cataclismo")
     } else if (inputNagas.checked){
+        spanclaseJugador.innerHTML = "Nagas"
         alert("Seleccionate Nagas")
     } else if (inputTauren.checked){
+        spanclaseJugador.innerHTML = "Tauren"
         alert("Seleccionate Tauren")
     } else if (inputHydros.checked){
+        spanclaseJugador.innerHTML = "Hydros"
         alert("Seleccionate Hydros")
     } else if (inputPaladin.checked){
+        spanclaseJugador.innerHTML = "Paladin"
         alert("Seleccionate Paladin")
     } else{
         alert("Selecciona una clase")
