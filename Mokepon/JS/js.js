@@ -1,6 +1,21 @@
+let ataqueJugador
+
+
 function iniciarJuego(){
+
     let botonClaseJugador = document.getElementById('boton-selec-clase')
     botonClaseJugador.addEventListener('click', SeleccionarClaseJugador)
+
+    let botonFuego = document.getElementById('boton-ataque-fuego')
+    botonFuego.addEventListener('click', ataqueFuego)
+    let botonAgua = document.getElementById('boton-ataque-agua')
+    botonAgua.addEventListener('click', ataqueAgua)
+    let botonAire = document.getElementById('boton-ataque-aire')
+    botonAire.addEventListener('click', ataqueAire)
+    let botonPlanta = document.getElementById('boton-ataque-planta')
+    botonPlanta.addEventListener('click', ataquePlanta)
+    let botonSagrado = document.getElementById('boton-ataque-sagrado')
+    botonSagrado.addEventListener('click', ataqueSagrado)
 }
 
 function SeleccionarClaseJugador(){
@@ -44,6 +59,23 @@ function SeleccionarClaseJugador(){
 
 function SeleccionarClaseEnemigo(){
     let claseAleatorio = aleatorio(1,7)
+    let spanClaseEnemigo = document.getElementById('clase-enemigo')
+
+    if (claseAleatorio == 1){
+        spanClaseEnemigo .innerHTML = 'Herbolestero'
+    } else if (claseAleatorio == 2){
+        spanClaseEnemigo .innerHTML = 'Monje'
+    } else if (claseAleatorio == 3){
+        spanClaseEnemigo .innerHTML = 'Cataclismo'
+    } else if (claseAleatorio == 4){
+        spanClaseEnemigo .innerHTML = 'Nagas'
+    } else if (claseAleatorio == 5){
+        spanClaseEnemigo .innerHTML = 'Tauren'     
+    } else if (claseAleatorio == 6){
+        spanClaseEnemigo .innerHTML = 'Hydros'   
+    } else if (claseAleatorio == 7){
+        spanClaseEnemigo .innerHTML = 'Paladin' 
+    }
 }
 
 function aleatorio(min,max){
