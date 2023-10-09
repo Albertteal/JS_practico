@@ -1,4 +1,5 @@
 let ataqueJugador
+let ataqueEnemigo
 
 
 function iniciarJuego(){
@@ -76,10 +77,62 @@ function SeleccionarClaseEnemigo(){
     } else if (claseAleatorio == 7){
         spanClaseEnemigo .innerHTML = 'Paladin' 
     }
+    SeleccionarClaseEnemigo()
 }
+
+
 
 function aleatorio(min,max){
     return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+function ataqueFuego(){
+    ataqueJugador = 'FUEGO'
+    SeleccionarAtaqueEnemigo()
+}
+
+function ataqueAgua(){
+    ataqueJugador = 'AGUA'
+    SeleccionarAtaqueEnemigo()
+}
+
+function ataqueAire(){
+    ataqueJugador = 'AIRE'
+    SeleccionarAtaqueEnemigo()
+}
+
+function ataquePlanta(){
+    ataqueJugador = 'PLANTA'
+    SeleccionarAtaqueEnemigo()
+}
+
+function ataqueSagrado(){
+    ataqueJugador = 'SAGRADO'
+    SeleccionarAtaqueEnemigo()
+}
+
+function SeleccionarAtaqueEnemigo(){
+    let ataqueAleatorio = aleatorio(1,5)
+
+    if (ataqueAleatorio == 1){
+        ataqueEnemigo = 'FUEGO'
+    } else if(ataqueAleatorio == 2){
+        ataqueEnemigo = 'AGUA'
+    } else if(ataqueAleatorio == 3){
+        ataqueEnemigo = 'AIRE'
+    } else if(ataqueAleatorio == 4){
+        ataqueEnemigo = 'PLANTA'
+    }  else if(ataqueAleatorio == 5){
+        ataqueEnemigo = 'SAGRADO'
+    } 
+    crearMensaje()
+}
+
+function crearMensaje(){
+    let sectionMensajes = document.getElementById('mensajes')
+    let parrafo = document.createElement('p')  //creamos un nuevo parrafo
+    parrafo.innerHTML = 'Atacaste con ' + ataqueJugador + ',el enemigo atacó con' + ataqueEnemigo + '- PENDIENTE'
+    sectionMensajes.appendChild(parrafo)  //nos permite crear el parrafo en la ubi que queremos
 }
 window.addEventListener('load', iniciarJuego) //Nos sirve oara avisar que inicie todo cuando ya se haya cargado
                                                 //Todo el HTML y ahora sí pasamos al JS
